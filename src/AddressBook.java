@@ -3,21 +3,18 @@ import java.util.*;
 public class AddressBook {
     private ArrayList<BuddyInfo> buddyInfoArrayList = new ArrayList<>();
 
-    public void addBuddy(String name){
-        buddyInfoArrayList.add(new BuddyInfo(name));
+    public void addBuddy(BuddyInfo buddy){
+        buddyInfoArrayList.add(buddy);
     }
 
-    public void removeBuddy(String name){
-        for(BuddyInfo buddy: buddyInfoArrayList){
-            if (buddy.getName().equals(name)){
-                buddyInfoArrayList.remove(buddy);
-                break;
-            }
-        }
-        //buddy to remove not found.
+    public void removeBuddy(BuddyInfo buddy){
+        buddyInfoArrayList.remove(buddy);
     }
 
     public static void main(String[] args){
-        System.out.println("Address Book");
+        BuddyInfo buddy = new BuddyInfo("Tom");
+        AddressBook addressBook = new AddressBook();
+        addressBook.addBuddy(buddy);
+        addressBook.removeBuddy(buddy);
     }
 }
