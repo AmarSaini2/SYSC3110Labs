@@ -16,5 +16,5 @@ public class AddressBook {
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
         addressBook.removeBuddy(buddy);
-    }
+    }//comment added on github
 }
